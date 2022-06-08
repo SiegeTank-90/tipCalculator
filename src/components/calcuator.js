@@ -8,7 +8,7 @@ import TipButton from "./tipButton";
 
 function Calc() {
   const [Bill, setBill] = useState(0);
-  const [People, setPeople] = useState(1);
+  const [People, setPeople] = useState(2);
   const [Tip, setTip] = useState(0);
   const [index, setIndex] = useState(0);
   const [FocusValue, setFocusValue] = useState(0);
@@ -34,7 +34,7 @@ function Calc() {
 
   function Reset() {
     setBill(0);
-    setPeople(1);
+    setPeople(2);
     setTip(0);
     setIndex(0);
   }
