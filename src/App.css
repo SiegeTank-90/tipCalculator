@@ -1,0 +1,224 @@
+.App {
+  display: flex;
+  justify-content: center;
+}
+.Container {
+  margin-top: 10%;
+  width: 750px;
+  max-width: 80%;
+}
+.TitleContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10%;
+}
+
+.Title {
+  margin: 0;
+  font-size: 1.25rem;
+  letter-spacing: 0.5rem;
+  color: hsl(183, 100%, 15%, 0.8);
+}
+
+.CalculatorContainer {
+  background-color: white;
+  padding: 3%;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  min-height: 350px;
+}
+
+.OperatorContainer {
+  margin-right: 5%;
+  width: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+}
+
+.ResultContainer {
+  width: 300px;
+}
+
+.ResultSeperator {
+  min-width: 100%;
+}
+
+.ResultBackground {
+  background-color: hsl(183, 100%, 15%);
+  padding: 5%;
+  border-radius: 15px;
+  height: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+.SectionHeader {
+  margin: 2px;
+  font-size: 12px;
+}
+.CalcTitle {
+  color: hsl(186, 14%, 43%);
+  padding-bottom: 5px;
+  display: inline-block;
+}
+.CalcWarning {
+  color: hsl(0, 100%, 50%);
+  padding-bottom: 5px;
+  display: inline-block;
+  text-align: right;
+  position: relative;
+  float: right;
+}
+
+.hidden {
+  display: none;
+}
+.ResultTitle {
+  color: white;
+}
+
+.ResultSubTitle {
+  margin: 0;
+  color: hsl(184, 14%, 56%);
+  font-size: 12px;
+}
+.TotalsContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Total {
+  font-size: 40px;
+  color: hsl(172, 67%, 45%);
+}
+
+.ResetButton {
+  width: 100%;
+  background-color: hsl(172, 67%, 45%);
+  border: none;
+  padding: 4%;
+  border-radius: 5px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input {
+  border: none;
+}
+input[type="number"]:focus {
+  outline: none;
+}
+
+.InputContainer {
+  width: 100%;
+}
+
+.GreenBorder{
+  border: solid 2px hsl(183, 100%, 15%);
+}
+
+.RedBorder{
+  border: solid 2px red;
+}
+
+
+
+.InputNumber {
+  text-align: right;
+  background-color: transparent;
+  width: 100%;
+  color: hsl(183, 100%, 15%);
+  font-size: 20px;
+  font-weight: 800;
+  padding-right: 15px;
+}
+
+.inputValueContainer {
+  background-color: hsl(189, 41%, 97%);
+  height: 40px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+.icon {
+  padding: 10px;
+  height: 15px;
+}
+
+.TipButtonContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+}
+
+.BasicTipButton {
+  background-color: hsl(183, 100%, 15%);
+  color: white;
+  width: 85px;
+  height: 35px;
+  border-radius: 5px;
+  border: none;
+  font-weight: 800;
+}
+
+.BasicTipButton-Active {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+  width: 85px;
+  height: 35px;
+  border-radius: 5px;
+  border: none;
+  font-weight: 800;
+}
+
+.CustomTipContainer {
+  background-color: hsl(189, 41%, 97%);
+  width: 85px;
+  height: 35px;
+  border-radius: 5px;
+}
+
+.CustomTipContainer-Active {
+  background-color: hsl(189, 41%, 97%);
+  width: 85px;
+  height: 35px;
+  border-radius: 5px;
+  border: 2px solid hsl(172, 67%, 45%);
+}
+
+.CustomTipButton {
+  background-color: transparent;
+  width: 85px;
+  height: 35px;
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: hsl(183, 100%, 15%);
+}
+
+.CustomTipButton-Active {
+  background-color: transparent;
+  width: 75px;
+  height: 35px;
+  font-weight: 800;
+  text-align: right;
+  color: hsl(183, 100%, 15%);
+}
+
+@media screen and (max-width: 500px) {
+  .Container {
+    max-width: 100%;
+    height: 100vh;
+  }
+  .OperatorContainer {
+    margin-bottom: 15%;
+  }
+
+}
