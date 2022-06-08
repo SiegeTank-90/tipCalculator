@@ -34,7 +34,7 @@ function Calc() {
 
   function Reset() {
     setBill(0);
-    setPeople(0);
+    setPeople(1);
     setTip(0);
     setIndex(0);
   }

@@ -36,6 +36,7 @@ function ManualInputs(props) {
             className="InputNumber"
             type="Number"
             defaultValue={props.value}
+            value={props.value}
             onFocus={handleFocus}
             onBlur={handleFocus}
             onChange={handleValue}

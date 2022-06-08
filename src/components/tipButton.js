@@ -15,7 +15,7 @@ function TipButton(props) {
   return (
     <div>
       <button className={activeState} value={props.value} onClick={handleValue}>
-        {props.value}
+        {props.value}%
       </button>
     </div>
   );
