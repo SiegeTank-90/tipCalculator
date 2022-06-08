@@ -16,11 +16,17 @@ function ManualInputs(props) {
   function handleFocus() {
     if (props.index == props.OnFocus) {
         props.setFocus(0)
+
+   
     } else props.setFocus(props.index)
   }
 
   function handleValue(e) {
     props.setValue(e.target.value);
+  }
+
+  function handleClick() {
+      props.setValue('')
   }
 
   return (
@@ -34,11 +40,11 @@ function ManualInputs(props) {
           <img className="icon" src={props.Icon} />
           <input
             className="InputNumber"
-            type="Number"
-            defaultValue={props.value}
+            type="number"
             value={props.value}
             onFocus={handleFocus}
             onBlur={handleFocus}
+            onClick={handleClick}
             onChange={handleValue}
           ></input>
         </div>

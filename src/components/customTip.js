@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState} from "react";
 
 function CustomTip(props) {
   var ActiveState = "CustomTipButton";
   var ActiveContainer = "CustomTipContainer";
+  const [ CustomTip, setCustomTip] = useState('')
 
   if (props.index === props.active) {
     ActiveState = "CustomTipButton-Active";
@@ -15,6 +16,10 @@ function CustomTip(props) {
 
   function handleValue(e) {
     props.setValue(e.target.value);
+    setCustomTip(e.target.value);
+  }
+  function handleBlur() {
+    setCustomTip('')
   }
 
   return (
@@ -23,6 +28,8 @@ function CustomTip(props) {
         type="number"
         className={ActiveState}
         placeholder="Custom"
+        value={CustomTip}
+        onBlur={handleBlur}
         onClick={handleClick}
         onChange={handleValue}
       ></input>
