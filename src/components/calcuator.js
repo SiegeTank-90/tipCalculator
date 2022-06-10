@@ -12,7 +12,7 @@ function Calc() {
   const [Tip, setTip] = useState(0);
   const [index, setIndex] = useState(0);
   const [FocusValue, setFocusValue] = useState(0);
-
+  
   function TipCalculator() {
     if (Bill === 0) {
       return 0;
@@ -92,6 +92,7 @@ function Calc() {
             <CustomTip
               active={index}
               index={6}
+              value={Tip}
               setValue={setTip}
               setIndex={setIndex}
             />

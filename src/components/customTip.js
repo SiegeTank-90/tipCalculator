@@ -1,9 +1,15 @@
-import React, { useState} from "react";
+import React, { useEffect, useState } from "react";
 
 function CustomTip(props) {
   var ActiveState = "CustomTipButton";
   var ActiveContainer = "CustomTipContainer";
-  const [ CustomTip, setCustomTip] = useState('')
+  const [CustomTip, setCustomTip] = useState("");
+
+  useEffect(() => {
+    if (props.index != props.active) {
+      setCustomTip("");
+    }
+  }, [props.value]);
 
   if (props.index === props.active) {
     ActiveState = "CustomTipButton-Active";
@@ -18,9 +24,6 @@ function CustomTip(props) {
     props.setValue(e.target.value);
     setCustomTip(e.target.value);
   }
-  function handleBlur() {
-    setCustomTip('')
-  }
 
   return (
     <div className={ActiveContainer}>
@@ -29,7 +32,6 @@ function CustomTip(props) {
         className={ActiveState}
         placeholder="Custom"
         value={CustomTip}
-        onBlur={handleBlur}
         onClick={handleClick}
         onChange={handleValue}
       ></input>
